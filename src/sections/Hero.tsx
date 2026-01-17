@@ -1,10 +1,19 @@
-import memojiImage from '@/assets/images/logoJA__sinFondo.png';
+import memojiImage from '@/assets/images/logoJA2_bg.png';
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
+import grainImage from '@/assets/images/fondo1.jpg';
 
 export const HeroSection = () => {
   return (
-  <div className="py-32 md:py-48 lg:py-60">
+  <div className="py-32 md:py-48 lg:py-60 relative z-0">
+
+    <div 
+      className="absolute inset-0 -z-30 opacity-25" 
+      style={{ 
+        backgroundImage: `url(${grainImage.src})`, 
+      }} 
+    ></div>
+
     <div className="container">
       <div className="flex flex-col items-center" >
         <Image 
