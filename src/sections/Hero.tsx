@@ -22,10 +22,10 @@ export const HeroSection = () => {
     <div className="size-[1020px] absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5"></div>
     <div className="size-[1220px] absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5"></div>
       <HeroOrbit size={800} rotation={-72} >
-          <StarIcon className="size-28 text-cyan-100" />
+          <StarIcon className="size-28 text-cyan-100 animate-pulse" />
       </HeroOrbit>
       <HeroOrbit size={550} rotation={-12}>
-          <StarIcon className="size-12 text-cyan-100" />
+          <StarIcon className="size-12 text-cyan-100 animate-pulse" />
       </HeroOrbit>
 
     <div className="container">
