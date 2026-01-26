@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/fondo18.jpg';
 import StarIcon from '@/assets/icons/star.svg';
+import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
 
 
@@ -27,6 +28,12 @@ export const HeroSection = () => {
       <HeroOrbit size={550} rotation={-12}>
           <StarIcon className="size-12 text-cyan-100 animate-pulse" />
       </HeroOrbit>
+      <HeroOrbit size={590} rotation={98}>
+          <StarIcon className="size-8 text-cyan-100 animate-pulse" />
+      </HeroOrbit>
+      <HeroOrbit size={430} rotation={98}>
+          <SparkleIcon className="size-10 text-cyan-100 animate-pulse" />
+      </HeroOrbit>      
 
     <div className="container">
       <div className="flex flex-col items-center" >
