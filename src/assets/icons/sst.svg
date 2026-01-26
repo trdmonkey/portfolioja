@@ -1,0 +1,45 @@
+<svg
+    width="128"
+    height="128"
+    viewBox="0 0 128 128"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Icono SST"
+>
+    <!-- Fondo escudo -->
+    <defs>
+        <linearGradient id="gradSST" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f766e"/>
+            <stop offset="100%" stop-color="#115e59"/>
+        </linearGradient>
+    </defs>
+
+    <path
+        d="M64 6
+           L108 24
+           V64
+           C108 90 86 112 64 122
+           C42 112 20 90 20 64
+           V24
+           Z"
+        fill="url(#gradSST)"
+        stroke="#0d9488"
+        stroke-width="4"
+        stroke-linejoin="round"
+    />
+
+    <!-- Texto SST -->
+    <text
+        x="64"
+        y="72"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="Segoe UI, Inter, Arial, sans-serif"
+        font-size="40"
+        font-weight="700"
+        letter-spacing="2"
+        fill="#ecfeff"
+    >
+        SST
+    </text>
+</svg>

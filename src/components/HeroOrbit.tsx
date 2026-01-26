@@ -4,7 +4,8 @@ export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size
     return (
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">
             <div 
-                className="" 
+                /* className="outline outline-1 outline-cyan-500 flex items-start justify-start" */ 
+                className="flex items-start justify-start"
                 style={{
                     transform: `rotate(${rotation}deg)`,
                     height: `${size}px`,

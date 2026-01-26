@@ -1,0 +1,23 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="12" width="136" height="136" rx="20"
+        fill="none" stroke="currentColor" stroke-width="2"/>
+
+  <line x1="36" y1="36" x2="36" y2="124"
+        stroke="currentColor" stroke-width="2"/>
+
+  <text x="56" y="86"
+        font-family="Inter, Segoe UI, Arial"
+        font-size="28"
+        font-weight="700"
+        fill="currentColor">
+    SST
+  </text>
+
+  <text x="56" y="110"
+        font-family="Inter, Segoe UI, Arial"
+        font-size="12"
+        letter-spacing="1"
+        fill="currentColor">
+    SEGURIDAD
+  </text>
+</svg>
