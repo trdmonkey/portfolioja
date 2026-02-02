@@ -48,8 +48,13 @@ export const ProjectsSection = () => {
   return (
     <div>
       <div className="container">
-        <p>Real-world Results</p>
-        <h2>Featured Projects</h2>
+        <div className="flex justify-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
+            Real-world Results
+          </p>
+        </div>
+
+        <h2 className="font-serif text-3xl text-center mt-6" >Featured Projects</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
           reprehenderit.
