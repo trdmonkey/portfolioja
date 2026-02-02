@@ -20,3 +20,23 @@ background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox=
 // SVG Icons
 https://www.svgrepo.com/
 
+
+// fuentes
+fontpair.co
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// new option portfolio
+https://www.youtube.com/watch?v=Z7I5uSRHMHg
