@@ -8,7 +8,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <div className="relative z-0 overflow-x-clip min-h-screen flex items-center">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-15"
@@ -54,11 +54,15 @@ export const HeroSection = () => {
       </div>
       <div className="container">
         <div className="flex flex-col items-center">
-          <Image
-            src={memojiImage}
-            className="size-[300px]"
-            alt="J&A Soluciones Integradas"
-          />
+          <div className="relative w-[350px] h-[350px]">
+            <Image
+              src={memojiImage}
+              alt="J&A Soluciones Integradas"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-full">
             <div className="bg-green-500 size-2.5 rounded-full"></div>
             <div className="text-sm font-medium">
