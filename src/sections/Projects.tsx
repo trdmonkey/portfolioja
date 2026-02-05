@@ -6,6 +6,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import { Result } from "postcss";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import grainImage from "@/assets/images/fondo1.jpg";
 
 const portfolioProjects = [
   {
@@ -48,7 +49,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <div>
+    <section className="pb-16">
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
@@ -69,6 +70,12 @@ export const ProjectsSection = () => {
               key={project.title}
               className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8" /* p-8 para que la imagen salga completa y con padding-bottom */
             >
+              <div
+                className="absolute inset-0 -z-10 opacity-5"
+                style={{
+                  backgroundImage: `url(${grainImage.src})`,
+                }}
+              ></div>
               <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                 <span>{project.company}</span>
                 <span>&bull;</span>
@@ -100,6 +107,6 @@ export const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
