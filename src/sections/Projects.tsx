@@ -7,6 +7,7 @@ import { Result } from "postcss";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/fondo1.jpg";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
@@ -51,19 +52,20 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <div className="flex justify-center">
+        <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
+          reprehenderit." />
+        {/* <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
-            Real-world Results
+            
           </p>
         </div>
 
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          Featured Projects
+          
         </h2>
         <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-          reprehenderit.
-        </p>
+          
+        </p> */}
         <div className="mt-10 md:mt-20 flex flex-col gap-12">
           {portfolioProjects.map((project) => (
             <div
