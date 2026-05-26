@@ -6,7 +6,7 @@ Min: 1:59:32
 
 Video 2
 https://www.youtube.com/watch?v=72OKuwYxWf8
-Min 13:38
+Min 28:44
 
 
 // cd ~/Descargas
