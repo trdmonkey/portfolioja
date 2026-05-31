@@ -84,7 +84,7 @@ export const AboutSection = () => {
           title="Un vistazo a nuestro ecosistema"
           description="Ven a conocer sobre nuestra misión, visión y valores corporativos"
         />
-        <div className="mt-16">
+        <div className="mt-16 flex flex-col gap-8">
           <CardAbout className="h-[320px]">
             <CardHeader
               title="Mis libros"
@@ -104,7 +104,7 @@ export const AboutSection = () => {
           <CardAbout className="h-[320px] p-0">
             <CardHeader
               title="Mis Herramientas"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." 
+              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
               className="px-6 pt-6"
             />
             {/* <div>
@@ -116,7 +116,11 @@ export const AboutSection = () => {
               ))}
             </div> */}
             <ToolboxItems items={toolboxItems} className="mt-6" />
-            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems
+              items={toolboxItems}
+              className="mt-6" 
+              itemsWrapperClassName="-translate-x-1/2"
+            />
           </CardAbout>
           <CardAbout>
             <CardHeader
