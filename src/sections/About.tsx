@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import { CardAbout } from '@/components/CardAbout';
+import { CardAbout } from "@/components/CardAbout";
 import StarIcon from "@/assets/icons/star.svg";
 import StarIcon2 from "@/assets/icons/arrow2.svg";
 import bookImage from "@/assets/images/book22.png";
@@ -85,22 +85,29 @@ export const AboutSection = () => {
           description="Ven a conocer sobre nuestra misión, visión y valores corporativos"
         />
         <div className="mt-16">
-          <CardAbout className="h-[320px]" >
-            <CardHeader title="Mis libros" description="Explore my books shaping my perspectives." />
-        {/* <div className="flex flex-col" >
+          <CardAbout className="h-[320px]">
+            <CardHeader
+              title="Mis libros"
+              description="Explore my books shaping my perspectives."
+            />
+            {/* <div className="flex flex-col" >
               <div className="inline-flex items-center gap-2">
                 <StarIcon2 className="size-7 text-emerald-200" />
                 <h3 className="font-serif text-3xl" >Mis libros</h3>
               </div>
               <p className="text-sm text-white/60 mt-2" >Explore my books shaping my perspectives.</p>
             </div> */}
-            <div className="w-40 mx-auto mt-8" >
+            <div className="w-40 mx-auto mt-8">
               <Image src={bookImage} alt="Book Cover" />
             </div>
           </CardAbout>
-          <CardAbout>
-            <CardHeader title="Mis Herramientas" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-        {/* <div>
+          <CardAbout className="h-[320px] p-0">
+            <CardHeader
+              title="Mis Herramientas"
+              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." 
+              className="px-6 pt-6"
+            />
+            {/* <div>
               {toolboxItems.map((item) => (
                 <div key={item.title} className="inline-flex items-center gap-2 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
                   <TechIcon component={item.iconType} />
@@ -108,10 +115,14 @@ export const AboutSection = () => {
                 </div>
               ))}
             </div> */}
-            <ToolboxItems items={toolboxItems} />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
           </CardAbout>
           <CardAbout>
-            <CardHeader title="Tecnologías" description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." />
+            <CardHeader
+              title="Tecnologías"
+              description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+            />
             <div>
               {hobbies.map((hobby) => (
                 <div key={hobby.title}>
