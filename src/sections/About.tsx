@@ -118,7 +118,7 @@ export const AboutSection = () => {
             <ToolboxItems items={toolboxItems} className="mt-6" />
             <ToolboxItems
               items={toolboxItems}
-              className="mt-6" 
+              className="mt-6"
               itemsWrapperClassName="-translate-x-1/2"
             />
           </CardAbout>
@@ -129,8 +129,11 @@ export const AboutSection = () => {
             />
             <div>
               {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
+                <div
+                  key={hobby.title}
+                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-300 rounded-full py-1.5"
+                >
+                  <span className="font-medium text-gray-700" >{hobby.title}</span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
