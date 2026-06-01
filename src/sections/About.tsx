@@ -84,14 +84,14 @@ const hobbies = [
   {
     title: "Reading",
     emoji: "👨‍🎓",
-    left: "0%",
+    left: "1%",
     top: "2%",
   },
 ];
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="Nosotros"
@@ -99,8 +99,8 @@ export const AboutSection = () => {
           description="Ven a conocer sobre nuestra misión, visión y valores corporativos"
         />
         <div className="mt-16 flex flex-col gap-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
-            <CardAbout className="h-[320px] md:col-span-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            <CardAbout className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="Mis libros"
                 description="Explore my books shaping my perspectives."
@@ -109,7 +109,7 @@ export const AboutSection = () => {
                 <Image src={bookImage} alt="Book Cover" />
               </div>
             </CardAbout>
-            <CardAbout className="h-[320px] md:col-span-3">
+            <CardAbout className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Mis Herramientas"
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
@@ -131,8 +131,8 @@ export const AboutSection = () => {
               />
             </CardAbout>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            <CardAbout className="h-[320px] p-0 flex flex-col col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+            <CardAbout className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Tecnologías"
                 description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
@@ -156,7 +156,7 @@ export const AboutSection = () => {
                 ))}
               </div>
             </CardAbout>
-            <CardAbout className="h-[320px] p-0 relative col-span-2">
+            <CardAbout className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image
                 src={mapImage}
                 alt="map"
