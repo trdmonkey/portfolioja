@@ -21,20 +21,32 @@ export const HeroSection = () => {
         <div className="size-[820px] absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5"></div>
         <div className="size-[1020px] absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5"></div>
         <div className="size-[1220px] absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5"></div>
-        <HeroOrbit size={800} rotation={-72}>
-          <StarIcon className="size-28 text-cyan-100 animate-pulse" />
-        </HeroOrbit>
-        <HeroOrbit size={550} rotation={-12}>
-          <StarIcon className="size-12 text-cyan-100 animate-pulse" />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={98}>
-          <StarIcon className="size-8 text-cyan-100 animate-pulse" />
-        </HeroOrbit>
+
+
+        {/* 
+        
+        shouldOrbit?: boolean;
+        shouldSpin?: boolean;
+        spinDuration?: string;
+        orbitDuration?: string;
+        
+        */}
+
+
         <HeroOrbit size={430} rotation={-14}>
           <SparkleIcon className="size-10 text-cyan-100 animate-pulse" />
         </HeroOrbit>
         <HeroOrbit size={440} rotation={79}>
           <SparkleIcon className="size-5 text-cyan-100 animate-pulse" />
+        </HeroOrbit>
+        <HeroOrbit size={550} rotation={-12}>
+          <StarIcon className="size-12 text-cyan-100 animate-pulse" />
+        </HeroOrbit>
+        <HeroOrbit size={568} rotation={-41}>
+          <SparkleIcon className="size-4 text-cyan-100 animate-pulse" />
+        </HeroOrbit>
+        <HeroOrbit size={590} rotation={98}>
+          <StarIcon className="size-8 text-cyan-100 animate-pulse" />
         </HeroOrbit>
         <HeroOrbit size={630} rotation={178}>
           <SparkleIcon className="size-10 text-cyan-100 animate-pulse" />
@@ -42,16 +54,16 @@ export const HeroSection = () => {
         <HeroOrbit size={710} rotation={144}>
           <SparkleIcon className="size-14 text-cyan-100 animate-pulse" />
         </HeroOrbit>
-        <HeroOrbit size={990} rotation={115}>
+        <HeroOrbit size={730} rotation={-5}>
           <div className="size-1 rounded-full bg-cyan-100 animate-pulse" />
+        </HeroOrbit>
+        <HeroOrbit size={800} rotation={-72}>
+          <StarIcon className="size-28 text-cyan-100 animate-pulse" />
         </HeroOrbit>
         <HeroOrbit size={868} rotation={-55}>
           <div className="size-1 rounded-full bg-cyan-100 animate-pulse" />
         </HeroOrbit>
-        <HeroOrbit size={568} rotation={-41}>
-          <SparkleIcon className="size-4 text-cyan-100 animate-pulse" />
-        </HeroOrbit>
-        <HeroOrbit size={730} rotation={-5}>
+        <HeroOrbit size={990} rotation={115}>
           <div className="size-1 rounded-full bg-cyan-100 animate-pulse" />
         </HeroOrbit>
       </div>
@@ -67,7 +79,9 @@ export const HeroSection = () => {
             />
           </div>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-full">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large" ></div>
+            </div>
             <div className="text-sm font-medium">
               Licencia y soluciones certificadas
             </div>
@@ -78,7 +92,10 @@ export const HeroSection = () => {
             Nos integramos a tu empresa
           </h1>
           <p className="mt-4 text-center text-white/70 md:text-lg max-w-2xl mx-auto">
-            Acompañamos a las empresas con Seguridad y Salud en el Trabajo, Gestión Ambiental, software a la medida, facturación electrónica, y estrategias audiovisuales y de marketing, todo bajo un enfoque técnico, legal y medible.
+            Acompañamos a las empresas con Seguridad y Salud en el Trabajo,
+            Gestión Ambiental, software a la medida, facturación electrónica, y
+            estrategias audiovisuales y de marketing, todo bajo un enfoque
+            técnico, legal y medible.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
