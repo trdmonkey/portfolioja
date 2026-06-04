@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/sst.jpg";
+import lightSaasLandingPage from "@/assets/images/gestionam.jpg";
+import aiStartupLandingPage from "@/assets/images/dev.jpg";
+import productMultimedia from "@/assets/images/produccionmultimedia.jpg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/fondo1.jpg";
@@ -10,52 +11,52 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Auditoría e Implementación",
+    year: "2026",
+    title: "Sistemas de Gestion en Seguridad y Salud en el Trabajo",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Reducción del 87% en tasa de accidentalidad laboral." },
+      { title: "Cumplimiento del 100% en estándares mínimos legales." },
+      { title: "Centralización documental con el Ministerio de Trabajo y ARL." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://astrid-hernandez.netlify.app/",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Cumplimiento Normativo y Ecoeficiencia",
+    year: "2026",
+    title: "Sostenibilidad Ambiental Estratégica",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Reducción del 45% en costos operativos por gestión de residuos." },
+      { title: "Cumplimiento integral ante autoridades ambientales (CORPONARIÑO)." },
+      { title: "Implementación de planes de manejo ambiental automatizados." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://astrid-hernandez.netlify.app/",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Ecosistema Digital B2B",
+    year: "Facturación DIAN",
+    title: "Desarrollo a la Medida",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Sistemas web y moviles, personalizados con stack moderno." },
+      { title: "Facturación electrónica 100% integrada y normativa DIAN." },
+      { title: "Automatización de procesos contables y operativos en VPS." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://jorge-luis.netlify.app/",
     image: aiStartupLandingPage,
   },
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Identidad Visual",
+    year: "Contenido Digital 3D",
+    title: "Producción Multimedia y VFX",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Creación de identidad corporativa y branding de alto impacto." },
+      { title: "Desarrollo de piezas audiovisuales y efectos visuales CGI y VFX." },
+      { title: "Modelado, texturizado y renderizado 3D para marketing digital." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://jorge-luis.netlify.app/",
+    image: productMultimedia,
   },
 ];
 
@@ -64,9 +65,9 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader 
-          eyebrow="Real-world Results" 
-          title="Featured Projects" 
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem reprehenderit." 
+          eyebrow="Servicios" 
+          title="Nuestras Soluciones Integradas" 
+          description="Transformamos desafíos técnicos y legales en activos operativos." 
         />
         
         <div className="mt-10 md:mt-20 flex flex-col gap-12">
@@ -107,7 +108,7 @@ export const ProjectsSection = () => {
                   </ul>
                   <a href={project.link}>
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>View Live Site</span>
+                      <span>Metodología</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>

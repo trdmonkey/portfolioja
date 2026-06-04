@@ -58,7 +58,7 @@ export const HeroSection = () => {
           <div className="size-1 rounded-full bg-cyan-100 animate-pulse" />
         </HeroOrbit>
         <HeroOrbit size={800} rotation={-72} shouldSpin  spinDuration="60s" shouldOrbit orbitDuration="85s">
-          <StarIcon className="size-24 text-cyan-100 animate-pulse" />
+          <StarIcon className="size-20 text-emerald-200 animate-pulse" />
         </HeroOrbit>
         <HeroOrbit size={900} rotation={-172} shouldSpin  spinDuration="60s" shouldOrbit orbitDuration="85s">
           <StarIcon className="size-23 text-cyan-100 animate-pulse" />
@@ -93,7 +93,7 @@ export const HeroSection = () => {
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large" ></div>
             </div>
             <div className="text-sm font-medium">
-              Licencia y soluciones certificadas
+              Consultoría técnica y legal certificada
             </div>
           </div>
         </div>

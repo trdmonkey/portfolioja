@@ -46,44 +46,44 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Vigilancia Epidem.",
+    emoji: "🏥",
     left: "57%",
     top: "48%",
   },
   {
-    title: "Photography",
-    emoji: "📷",
+    title: "Planes de Emergencia",
+    emoji: "🚨",
     left: "5%",
     top: "51%",
   },
   {
-    title: "Gaming",
-    emoji: "🎮",
+    title: "Control Contratistas",
+    emoji: "📋",
     left: "50%",
     top: "25%",
   },
   {
-    title: "Drumming",
-    emoji: "🥁",
+    title: "Investigación Accidental",
+    emoji: "🔍",
     left: "54%",
     top: "3%",
   },
   {
-    title: "Music",
-    emoji: "🎵",
+    title: "Gestión de EPP",
+    emoji: "🦺",
     left: "43%",
     top: "75%",
   },
   {
-    title: "Fitness",
-    emoji: "🤸‍♀️",
+    title: "Auditoría Legal",
+    emoji: "⚖️",
     left: "10%",
     top: "24%",
   },
   {
-    title: "Reading",
-    emoji: "👨‍🎓",
+    title: "Matriz de Riesgos",
+    emoji: "⚠️",
     left: "1%",
     top: "2%",
   },
@@ -102,8 +102,8 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <CardAbout className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="Mis libros"
-                description="Explore my books shaping my perspectives."
+                title="Normatividad"
+                description="Reglamento interno, manual de funciones e identidad corporativa."
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="Book Cover" />
@@ -111,8 +111,8 @@ export const AboutSection = () => {
             </CardAbout>
             <CardAbout className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="Mis Herramientas"
-                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                title="Stack Tecnológico"
+                description="Desarrollamos soluciones robustas utilizando un stack moderno para garantizar rendimiento, seguridad y escalabilidad."
                 className=""
               />
               {/* <div>
@@ -134,8 +134,8 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             <CardAbout className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="Tecnologías"
-                description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                title="Gestión de Seguridad (SST)"
+                description="Licencia vigente · Cumplimiento normativo."
                 className="px-6 py-6"
               />
               <div className="relative flex-1">

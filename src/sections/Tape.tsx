@@ -2,17 +2,19 @@ import StarIcon from "@/assets/icons/bolt.svg";
 import { Fragment } from "react";
 
 const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Responsive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
+  "SG-SST",
+  "Gestión Ambiental",
+  "Software Fullstack",
+  "Facturación Electrónica",
+  "Multimedia",
+  "CGI",
+  "VFX",
+  "Consultoría",
+  "3D",
+  "Auditoría",
+  "Innovación",
+  "Publicidad",
+  "Marketing online",
 ];
 
 export const TapeSection = () => {

@@ -10,15 +10,15 @@ import { Card } from "@/components/Card";
 
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "Eficiencia Operativa",
+    position: "Eliminamos la fragmentación administrativa.",
+    text: "Centralizamos en un solo ecosistema B2B: SST, Ambiental, Software, Facturación y Marketing.",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    name: "Inteligencia Técnica",
+    position: "Ingeniería de software a la medida + VFX de alto impacto.",
+    text: "No solo cumplimos la norma, la usamos para potenciar tu marca y acelerar tus ventas.",
     avatar: memojiAvatar2,
   },
   {
@@ -46,9 +46,9 @@ export const TestimonialsSection = () => {
     <div className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader
-          eyebrow="Happy Clients"
-          title="What Clients Say about Me"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's."
+          eyebrow="¿POR QUÉ ELEGIRNOS?"
+          title="Blindaje Integral y Escalabilidad"
+          description="Dejamos de lado los servicios aislados. En J&A, fusionamos el cumplimiento normativo con tecnología de vanguardia para convertir obligaciones legales en una ventaja competitiva para tu negocio."
         />
         <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]">
           <div className="flex gap-8 flex-none">
