@@ -1,6 +1,6 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
+import memojiAvatar1 from "@/assets/images/siso_sf.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
+import memojiAvatar3 from "@/assets/images/dev_sf.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -14,31 +14,31 @@ const testimonials = [
     name: "Eficiencia Operativa",
     position: "Eliminamos la fragmentación administrativa.",
     text: "Centralizamos en un solo ecosistema B2B: SST, Ambiental, Software, Facturación y Marketing.",
-    avatar: memojiAvatar1,
+    avatar: memojiAvatar1, // Tu memoji original o el de SST
   },
   {
     name: "Inteligencia Técnica",
     position: "Ingeniería de software a la medida + VFX de alto impacto.",
     text: "No solo cumplimos la norma, la usamos para potenciar tu marca y acelerar tus ventas.",
-    avatar: memojiAvatar2,
+    avatar: memojiAvatar3, // El nuevo memoji de Desarrollador / Programador
   },
   {
     name: "Marketing Digital Estratégico",
-    position: "CEO @ InnovateCo",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley",
-    avatar: memojiAvatar3,
+    position: "Transformamos tu presencia técnica en un imán de clientes.",
+    text: "Diseñamos embudos B2B y estrategias de posicionamiento que convierten la infraestructura de tu empresa en su mejor argumento de ventas.",
+    avatar: memojiAvatar5, 
   },
   {
     name: "Gestión Ambiental Integral",
-    position: "Product Manager @ GlobalTech",
-    text: " the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
-    avatar: memojiAvatar4,
+    position: "Sostenibilidad real alineada con el crecimiento de tu negocio.",
+    text: "Garantizamos el cumplimiento normativo estricto e implementamos sistemas de economía circular que reducen el impacto ambiental y optimizan tus costos operativos.",
+    avatar: memojiAvatar2, // El nuevo memoji de Ingeniera Ambiental (el de tu esposa)
   },
   {
-    name: "Factura y Nomina Electrónica",
-    position: "Sistema contable MAGNUM",
-    text: "It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop",
-    avatar: memojiAvatar5,
+    name: "Factura y Nómina Electrónica",
+    position: "Automatización fiscal absoluta, sin fricciones.",
+    text: "Sincronizamos tus procesos contables bajo el sistema MAGNUM, asegurando validez legal inmediata ante los entes de control con cero errores manuales.",
+    avatar: memojiAvatar4,
   },
 ];
 
@@ -52,7 +52,7 @@ export const TestimonialsSection = () => {
           description="Dejamos de lado los servicios aislados. En J&A, fusionamos el cumplimiento normativo con tecnología de vanguardia para convertir obligaciones legales en una ventaja competitiva para tu negocio."
         />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)] py-4 -my-4">
-          <div className="flex gap-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {testimonials.map((testimonial) => (

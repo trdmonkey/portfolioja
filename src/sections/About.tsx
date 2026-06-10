@@ -1,3 +1,4 @@
+"use client";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { CardAbout } from "@/components/CardAbout";
@@ -16,6 +17,8 @@ import mapImage from "@/assets/images/map2.png";
 import smileMemoji from "@/assets/images/jorge2.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
   {
@@ -46,43 +49,43 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Vigilancia Epidem.",
+    title: "AT",
     emoji: "🏥",
     left: "57%",
     top: "48%",
   },
   {
-    title: "Planes de Emergencia",
+    title: "SG-SST",
     emoji: "🚨",
     left: "5%",
     top: "51%",
   },
   {
-    title: "Control Contratistas",
+    title: "Matriz",
     emoji: "📋",
     left: "50%",
     top: "25%",
   },
   {
-    title: "Investigación Accidental",
+    title: "ARL",
     emoji: "🔍",
-    left: "54%",
-    top: "3%",
+    left: "64%",
+    top: "0%",
   },
   {
-    title: "Gestión de EPP",
+    title: "Capacitación",
     emoji: "🦺",
     left: "43%",
     top: "75%",
   },
   {
-    title: "Auditoría Legal",
+    title: "Auditoría",
     emoji: "⚖️",
-    left: "10%",
+    left: "5%",
     top: "24%",
   },
   {
-    title: "Matriz de Riesgos",
+    title: "Consultoría",
     emoji: "⚠️",
     left: "1%",
     top: "2%",
@@ -90,6 +93,7 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -103,7 +107,7 @@ export const AboutSection = () => {
             <CardAbout className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="Normatividad"
-                description="Reglamento interno, manual de funciones e identidad corporativa."
+                description="Reglamento Interno · Manual de Funciones · Identidad Corporativa."
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="Book Cover" />
@@ -112,7 +116,7 @@ export const AboutSection = () => {
             <CardAbout className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Stack Tecnológico"
-                description="Desarrollamos soluciones robustas utilizando un stack moderno para garantizar rendimiento, seguridad y escalabilidad."
+                description="Desarrollamos soluciones robustas utilizando un stack moderno."
                 className=""
               />
               {/* <div>
@@ -123,11 +127,15 @@ export const AboutSection = () => {
                 </div>
               ))}
             </div> */}
-              <ToolboxItems items={toolboxItems} className="" />
+              <ToolboxItems
+                items={toolboxItems}
+                className=""
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+              />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
               />
             </CardAbout>
           </div>
@@ -138,21 +146,23 @@ export const AboutSection = () => {
                 description="Licencia vigente · Cumplimiento normativo."
                 className="px-6 py-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-300 rounded-full py-1.5 absolute"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
                     }}
+                    drag
+                    dragConstraints={constraintRef}
                   >
                     <span className="font-medium text-gray-700">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </CardAbout>
@@ -163,7 +173,9 @@ export const AboutSection = () => {
                 className="h-full w-full object-cover"
               />{" "}
               {/* object-left-top */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping-large [animation-duration:2s]"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={smileMemoji} alt="smile" className="size-20" />
               </div>
             </CardAbout>
