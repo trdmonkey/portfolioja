@@ -6,7 +6,7 @@ export const ContactSection = () => {
   const whatsappUrl = "https://wa.me/573245695802?text=Hola,%20estoy%20interesado%20en%20una%20consultoría%20técnica%20para%20mi%20empresa.";
 
   return (
-    <div className="py-16 pt-4 lg:py-16 lg:pt-4">
+    <div id="contact" className="py-16 pt-4 lg:py-16 lg:pt-4">
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
           <div
