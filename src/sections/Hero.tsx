@@ -4,10 +4,12 @@ import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/fondo18.jpg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
+const whatsappUrl = "https://wa.me/573245695802?text=Hola,%20estoy%20interesado%20en%20una%20consultoría%20técnica%20para%20mi%20empresa.";
+
 export const HeroSection = () => {
   return (
-    // CORREGIDO: Eliminamos el bg-gray-950 para recuperar la fusión limpia entre secciones
-    <div id="home" className="relative z-0 overflow-x-clip min-h-screen flex items-center">
+    // CAMBIO CLAVE: Agregamos justify-center para que en conjunto con flex e items-center posicione todo matemáticamente al centro
+    <div id="home" className="relative z-0 overflow-x-clip min-h-screen flex items-center justify-center">
       
       {/* CONTENEDOR DE EFECTOS VISUALES CON TU MÁSCARA ORIGINAL RESTAURADA (black_70%) */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_70%,transparent)]">
@@ -18,11 +20,11 @@ export const HeroSection = () => {
           style={{ backgroundImage: `url(${grainImage.src})` }}
         ></div>
 
-        {/* REJILLA CYBERNETIC GRID: Ahora se difumina perfectamente al llegar abajo gracias a la máscara */}
+        {/* REJILLA CYBERNETIC GRID */}
         <div className="absolute inset-0 -z-30 opacity-20 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
 
-        {/* EFECTO DE ESCÁNER LÁSER: Protegido dentro de la máscara para no generar cortes bruscos */}
-        <div className="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent shadow-[0_0_20px_rgba(52,211,153,0.4)] opacity-40 animate-[bounce_8s_infinite] -z-20 pointer-events-none top-1/4"></div>
+        {/* EFECTO DE ESCÁNER LÁSER: Ahora usa la nueva animación de barrido vertical continuo */}
+        <div className="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent shadow-[0_0_20px_rgba(52,211,153,0.4)] opacity-40 animate-laser -z-20 pointer-events-none"></div>
 
         {/* Círculos Concéntricos Originales */}
         <div className="size-[620px] absolute inset-0 border border-emerald-500/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_100px_inset] shadow-emerald-500/5"></div>
@@ -30,7 +32,7 @@ export const HeroSection = () => {
         <div className="size-[1020px] absolute inset-0 border border-emerald-500/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
         <div className="size-[1220px] absolute inset-0 border border-cyan-500/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
 
-        {/* ÓRBITAS CON NODOS DE PRECISIÓN Y CRUCES TÉCNICAS */}
+        {/* ÓRBITAS CON NODOS DE PRECISIÓN Y CRUCES TÉCNICAS INTACTAS */}
         <HeroOrbit size={430} rotation={-14} shouldSpin spinDuration="40s" shouldOrbit orbitDuration="80s">
           <div className="text-emerald-400/40 text-xs font-mono select-none font-bold animate-pulse">+</div>
         </HeroOrbit>
@@ -61,11 +63,11 @@ export const HeroSection = () => {
 
       </div>
 
-      {/* CONTENIDO TEXTUAL Y CENTRAL */}
-      <div className="container relative z-10 pt-20">
+      {/* CAMBIO CLAVE: Mantiene pt-20 en móvil, pero en escritorio se equilibra (md:pt-4 md:pb-4) para subir el bloque de botones y evitar el scroll */}
+      <div className="container relative z-10 pt-20 md:pt-4 md:pb-4">
         <div className="flex flex-col items-center">
           
-          {/* Tu Avatar / Logo */}
+          {/* Tu Avatar / Logo original e imponente intacto */}
           <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px]">
             <Image
               src={memojiImage}
@@ -88,9 +90,9 @@ export const HeroSection = () => {
         </div>
 
         {/* COPYWRITING LETAL */}
-        <div className="max-w-3xl mx-auto text-center mt-8">
-          <h1 className="font-serif text-4xl md:text-6xl tracking-tight bg-gradient-to-b from-white via-white to-white/60 bg-clip-text text-transparent font-bold max-w-2xl mx-auto leading-tight">
-            Blindamos tu operación empresarial
+        <div className="max-w-3xl mx-auto text-center mt-2">
+          <h1 className="font-serif text-4xl md:text-5xl tracking-tight bg-gradient-to-b from-white via-white to-white/40 bg-clip-text text-transparent font-bold max-w-2xl mx-auto leading-tight">
+            Blindamos tu operation empresarial
           </h1>
           
           <p className="mt-5 text-white/70 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-normal">
@@ -98,34 +100,25 @@ export const HeroSection = () => {
           </p>
         </div>
 
-        {/* LLAMADOS A LA ACCIÓN (CTA) */}
-{/*         <div className="flex flex-col sm:flex-row justify-center items-center mt-10 gap-4">
-          <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/15 px-6 h-12 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300">
-            <span>Nuestras soluciones</span>
-            <ArrowDown className="size-4 opacity-70" />
-          </button>
-          
-          <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-gray-950 h-12 px-6 rounded-full text-sm font-semibold hover:bg-white/90 transition-all duration-300 shadow-[0_4px_20px_rgba(255,255,255,0.15)]">
-            <span>👋</span>
-            <span>Solicitar Diagnóstico</span>
-          </button>
-        </div> */}
-
-
-
+        {/* BOTONES ORIGINALES CON REDIRECCIÓN DE ENLACE */}
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-full">
-            <span className="font-semibold">Nuestras soluciones</span>
+          <a 
+            href="#projects" 
+            className="inline-flex items-center justify-center gap-2 border border-white/15 px-6 h-12 rounded-full cursor-pointer hover:bg-white/5 transition-all duration-300"
+          >
+            <span className="font-semibold text-sm">Nuestras soluciones</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-full">
+          </a>
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="inline-flex items-center justify-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-full cursor-pointer hover:bg-white/90 transition-all duration-300"
+          >
             <span>👋</span>
-            <span className="font-semibold">Diagnóstico</span>
-          </button>
+            <span className="font-semibold text-sm">Diagnóstico</span>
+          </a>
         </div>
-
-
-
 
       </div>
     </div>

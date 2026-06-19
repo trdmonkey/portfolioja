@@ -29,6 +29,8 @@ const config: Config = {
         "ping-large": "ping-large 1s ease-in-out infinite",
         "move-left": "move-left 1s linear infinite",
         "move-right": "move-right 1s linear infinite",
+        // 1. AGREGA ESTA LÍNEA AQUÍ: Define el comportamiento de la animación
+        "laser": "laser 6s linear infinite",
       },
       keyframes: {
         "ping-large": {
@@ -38,20 +40,19 @@ const config: Config = {
           },
         },
         "move-left": {
-          "0%": {
-            transform: "translateX(0%)",
-          },
-          "100%": {
-            transform: "translateX(-50%)",
-          },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         "move-right": {
-          "0%": {
-            transform: "translateX(-50%)",
-          },
-          "100%": {
-            transform: "translateX(0%)",
-          },
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        // 2. AGREGA ESTE BLOQUE AQUÍ: Determina la ruta del escáner de arriba a abajo
+        "laser": {
+          "0%": { top: "0%", opacity: "0" },
+          "10%": { opacity: "0.5" },
+          "90%": { opacity: "0.5" },
+          "100%": { top: "100%", opacity: "0" },
         },
       },
     },
