@@ -1,9 +1,6 @@
 "use client";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Card } from "@/components/Card";
 import { CardAbout } from "@/components/CardAbout";
-import StarIcon from "@/assets/icons/star.svg";
-import StarIcon2 from "@/assets/icons/arrow2.svg";
 import bookImage from "@/assets/images/book22.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
@@ -12,7 +9,6 @@ import CssIcon from "@/assets/icons/css3.svg";
 import FlutterIcon from "@/assets/icons/flutter.svg";
 import PhpIcon from "@/assets/icons/php.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map2.png";
 import smileMemoji from "@/assets/images/jorge2.png";
 import { CardHeader } from "@/components/CardHeader";
@@ -47,53 +43,75 @@ const toolboxItems = [
   },
 ];
 
-const hobbies = [
+const serviciosSST = [
   {
     title: "AT",
-    emoji: "🏥",
+    type: "critical", // Determina el color del LED
     left: "57%",
     top: "48%",
+    animateX: [0, 15, -20, 10, 0],
+    animateY: [0, -15, 10, -10, 0],
+    duration: 7,
   },
   {
     title: "SG-SST",
-    emoji: "🚨",
+    type: "active",
     left: "5%",
     top: "51%",
+    animateX: [0, -20, 15, -10, 0],
+    animateY: [0, 20, -15, 15, 0],
+    duration: 9,
   },
   {
     title: "Matriz",
-    emoji: "📋",
+    type: "active",
     left: "50%",
     top: "25%",
+    animateX: [0, 25, -15, 20, 0],
+    animateY: [0, -10, 20, -15, 0],
+    duration: 8,
   },
   {
     title: "ARL",
-    emoji: "🔍",
+    type: "info",
     left: "64%",
     top: "0%",
+    animateX: [0, -15, 20, -10, 0],
+    animateY: [0, 25, -20, 10, 0],
+    duration: 10,
   },
   {
     title: "Capacitación",
-    emoji: "🦺",
+    type: "active",
     left: "43%",
     top: "75%",
+    animateX: [0, 20, -25, 15, 0],
+    animateY: [0, -20, 10, -20, 0],
+    duration: 11,
   },
   {
     title: "Auditoría",
-    emoji: "⚖️",
+    type: "info",
     left: "5%",
     top: "24%",
+    animateX: [0, -10, 25, -15, 0],
+    animateY: [0, 15, -25, 20, 0],
+    duration: 7.5,
   },
   {
     title: "Consultoría",
-    emoji: "⚠️",
+    type: "active",
     left: "1%",
     top: "2%",
+    animateX: [0, 15, -15, 25, 0],
+    animateY: [0, 20, -10, 15, 0],
+    duration: 8.5,
   },
 ];
 
 export const AboutSection = () => {
   const constraintRef = useRef(null);
+
   return (
     <div id="about" className="py-20 lg:py-28">
       <div className="container">
@@ -119,14 +137,6 @@ export const AboutSection = () => {
                 description="Desarrollamos soluciones robustas utilizando un stack moderno."
                 className=""
               />
-              {/* <div>
-              {toolboxItems.map((item) => (
-                <div key={item.title} className="inline-flex items-center gap-2 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
-                  <TechIcon component={item.iconType} />
-                  <span className="font-semibold" >{item.title}</span>
-                </div>
-              ))}
-            </div> */}
               <ToolboxItems
                 items={toolboxItems}
                 className=""
@@ -147,21 +157,45 @@ export const AboutSection = () => {
                 className="px-6 py-6"
               />
               <div className="relative flex-1" ref={constraintRef}>
-                {hobbies.map((hobby) => (
+                {serviciosSST.map((servicio) => (
                   <motion.div
-                    key={hobby.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-300 rounded-full py-1.5 absolute"
+                    key={servicio.title}
+                    className="inline-flex items-center gap-2.5 px-5 bg-gray-950/40 border border-white/10 rounded-full py-1.5 absolute cursor-grab active:cursor-grabbing select-none backdrop-blur-sm"
                     style={{
-                      left: hobby.left,
-                      top: hobby.top,
+                      left: servicio.left,
+                      top: servicio.top,
+                    }}
+                    animate={{ x: servicio.animateX, y: servicio.animateY }}
+                    transition={{
+                      duration: servicio.duration,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
                     }}
                     drag
                     dragConstraints={constraintRef}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 15 }}
+                    whileHover={{
+                      scale: 1.05,
+                      borderColor: "rgba(52,211,153,0.4)",
+                      backgroundColor: "rgba(17,24,39,0.6)",
+                    }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <span className="font-medium text-gray-700">
-                      {hobby.title}
+                    {/* Micro-LED de Precisión Técnica en lugar del emoji */}
+                    <span
+                      className={`size-2 rounded-full shadow-[0_0_8px_currentColor] ${
+                        servicio.type === "critical"
+                          ? "text-rose-400 bg-rose-400"
+                          : servicio.type === "active"
+                            ? "text-emerald-400 bg-emerald-400"
+                            : "text-cyan-400 bg-cyan-400"
+                      }`}
+                    />
+
+                    <span className="font-mono text-xs font-semibold tracking-wider text-white/90">
+                      {servicio.title}
                     </span>
-                    <span>{hobby.emoji}</span>
                   </motion.div>
                 ))}
               </div>
@@ -172,7 +206,6 @@ export const AboutSection = () => {
                 alt="map"
                 className="h-full w-full object-cover"
               />{" "}
-              {/* object-left-top */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping-large [animation-duration:2s]"></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
