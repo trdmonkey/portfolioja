@@ -47,7 +47,7 @@ const serviciosSST = [
   {
     title: "AT",
     type: "critical", // Determina el color del LED
-    left: "57%",
+    left: "82%",
     top: "48%",
     animateX: [0, 15, -20, 10, 0],
     animateY: [0, -15, 10, -10, 0],
@@ -67,8 +67,8 @@ const serviciosSST = [
     type: "active",
     left: "50%",
     top: "25%",
-    animateX: [0, 25, -15, 20, 0],
-    animateY: [0, -10, 20, -15, 0],
+    animateX: [0, -15, 15, 25, 0],
+    animateY: [0, 20, -10, 25, 0],
     duration: 8,
   },
   {
@@ -92,7 +92,7 @@ const serviciosSST = [
   {
     title: "Auditoría",
     type: "info",
-    left: "5%",
+    left: "15%",
     top: "24%",
     animateX: [0, -10, 25, -15, 0],
     animateY: [0, 15, -25, 20, 0],
