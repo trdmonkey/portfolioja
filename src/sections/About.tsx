@@ -182,7 +182,7 @@ export const AboutSection = () => {
                     }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {/* Micro-LED de Precisión Técnica en lugar del emoji */}
+                    {/* Micro-LED */}
                     <span
                       className={`size-2 rounded-full shadow-[0_0_8px_currentColor] ${
                         servicio.type === "critical"
