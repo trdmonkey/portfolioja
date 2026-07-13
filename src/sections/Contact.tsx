@@ -3,7 +3,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { useState } from "react";
 
-// Actualizamos los nombres exactos que se ven en tu captura
+// Actualizamos los nombres de las opciones check box en el formulario modal
 const listaServicios = [
   "Gestión de Seguridad y Salud en el Trabajo (SG-SST).",
   "Gestión Ambiental y Disposición Final / Consultoría.",
@@ -73,7 +73,7 @@ export const ContactSection = () => {
           {/* Modifica esta línea dentro de tu Contact.tsx */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-between text-center lg:text-left">
             <div className="max-w-xl mx-auto lg:mx-0">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold">
+              <h2 className="font-serif text-2xl md:text-3xl">
                 ¿Listo para legalizar tu operación?
               </h2>
               <p className="text-sm md:text-base mt-2 text-gray-800 leading-relaxed">
@@ -96,7 +96,7 @@ export const ContactSection = () => {
         </div>
       </div>
 
-      {/* VENTANA MODAL CORREGIDA */}
+      {/* VENTANA MODAL */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-950/70 backdrop-blur-sm transition-opacity duration-300">
           <div className="bg-slate-900 border border-white/10 rounded-3xl w-full max-w-xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative shadow-2xl text-white">

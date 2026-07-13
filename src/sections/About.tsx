@@ -13,8 +13,21 @@ import mapImage from "@/assets/images/map2.png";
 import smileMemoji from "@/assets/images/jorge2.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import { ToolboxItemsTwo } from "@/components/ToolboxItemsTwo";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+
+// Icons ToolBoxItemsTwo
+
+import umlIcon from "@/assets/icons/uml.svg";
+import javaIcon from "@/assets/icons/java.svg";
+import laravelIcon from "@/assets/icons/laravel.svg";
+import pythonIcon from "@/assets/icons/python.svg";
+import mysqlIcon from "@/assets/icons/mysql.svg";
+import postgresqlIcon from "@/assets/icons/postgresql.svg";
+import googlecloudIcon from "@/assets/icons/google-cloud.svg";
+import awsIcon from "@/assets/icons/aws.svg";
+
 
 const toolboxItems = [
   {
@@ -40,6 +53,41 @@ const toolboxItems = [
   {
     title: "Flutter",
     iconType: FlutterIcon,
+  },
+];
+
+const toolboxItemsTwo = [
+  {
+    title: "UML",
+    iconType: umlIcon,
+  },
+  {
+    title: "Java",
+    iconType: javaIcon,
+  },
+  {
+    title: "Laravel",
+    iconType: laravelIcon,
+  },
+  {
+    title: "Python",
+    iconType: pythonIcon,
+  },
+  {
+    title: "MySql",
+    iconType: mysqlIcon,
+  },
+  {
+    title: "Postgresql",
+    iconType: postgresqlIcon,
+  },
+  {
+    title: "Google Cloud",
+    iconType: googlecloudIcon,
+  },
+  {
+    title: "AWS",
+    iconType: awsIcon,
   },
 ];
 
@@ -142,8 +190,8 @@ export const AboutSection = () => {
                 className=""
                 itemsWrapperClassName="animate-move-left [animation-duration:30s]"
               />
-              <ToolboxItems
-                items={toolboxItems}
+              <ToolboxItemsTwo
+                items={toolboxItemsTwo}
                 className="mt-6"
                 itemsWrapperClassName="animate-move-right [animation-duration:15s]"
               />

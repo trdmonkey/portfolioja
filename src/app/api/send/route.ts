@@ -20,8 +20,8 @@ export async function POST(req: Request) {
       : "Ninguno seleccionado";
 
     const data = await resend.emails.send({
-      from: "Portafolio J&A <onboarding@resend.dev>",
-      to: "trdmonkey218@gmail.com", // 🌟 Déjalo así para tus pruebas locales, luego pones el de J&A
+      from: "Portafolio J&A <onboarding@resend.dev>", // eSTE ES EL CORREO POR DEFECTO DEL CUAL SE ENVIAN LOS MAILS
+      to: "trdmonkey218@gmail.com", // Correo registrado en RESEND
       subject: `🚨 Nueva solicitud de asesoría: ${name}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #111827; max-width: 600px; border: 1px solid #e5e7eb; border-radius: 12px;">
