@@ -18,7 +18,9 @@ export const ContactSection = () => {
   const [phone, setPhone] = useState("");
   const [services, setServices] = useState<string[]>([]);
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const handleServiceChange = (servicio: string) => {
     if (services.includes(servicio)) {
@@ -68,17 +70,21 @@ export const ContactSection = () => {
             className="absolute inset-0 opacity-15 -z-10"
             style={{ backgroundImage: `url(${grainImage.src})` }}
           ></div>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-between">
-            <div className="max-w-xl">
-              <h2 className="font-serif text-2xl md:text-3xl">
-                ¿ Listo para legalizar tu operación ?
+          {/* Modifica esta línea dentro de tu Contact.tsx */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-between text-center lg:text-left">
+            <div className="max-w-xl mx-auto lg:mx-0">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold">
+                ¿Listo para legalizar tu operación?
               </h2>
               <p className="text-sm md:text-base mt-2 text-gray-800 leading-relaxed">
-                No esperes a una auditoría o un accidente. Hablemos de cómo integrar SST, cumplimiento ambiental y tecnología para que tu empresa deje de preocuparse por sanciones y se enfoque en escalar.
+                No esperes a una auditoría o un accidente. Hablemos de cómo
+                integrar SST, cumplimiento ambiental y tecnología para que tu
+                empresa deje de preocuparse por sanciones y se enfoque en
+                escalar.
               </p>
             </div>
-            <div>
-              <button 
+            <div className="w-full md:w-auto flex justify-center lg:justify-start">
+              <button
                 onClick={() => setIsOpen(true)}
                 className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-gray-800 transition-colors cursor-pointer text-sm font-semibold shadow-lg whitespace-nowrap"
               >
@@ -94,8 +100,7 @@ export const ContactSection = () => {
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-950/70 backdrop-blur-sm transition-opacity duration-300">
           <div className="bg-slate-900 border border-white/10 rounded-3xl w-full max-w-xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative shadow-2xl text-white">
-            
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors cursor-pointer size-8 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full text-lg"
             >
@@ -108,7 +113,8 @@ export const ContactSection = () => {
                 Solicitud de Consultoría Técnica
               </h3>
               <p className="text-xs md:text-sm text-white/60 mt-1">
-                Complete los siguientes datos para asignar un ingeniero especializado de J&A.
+                Complete los siguientes datos para asignar un ingeniero
+                especializado de J&A.
               </p>
             </div>
 
@@ -153,8 +159,8 @@ export const ContactSection = () => {
                 {/* Cambiado a 1 columna en móviles (grid-cols-1) y 1 columna en escritorio para nombres largos */}
                 <div className="grid grid-cols-1 gap-3.5">
                   {listaServicios.map((servicio) => (
-                    <label 
-                      key={servicio} 
+                    <label
+                      key={servicio}
                       className="flex items-start gap-3 text-xs text-white/70 hover:text-white cursor-pointer select-none"
                     >
                       {/* El shrink-0 bloquea el tamaño del checkbox evitando que se achique */}
@@ -190,8 +196,11 @@ export const ContactSection = () => {
                 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-full transition-opacity disabled:opacity-40 cursor-pointer text-sm font-semibold mt-2 shadow-lg hover:opacity-90"
               >
                 <span>
-                  {status === "sending" ? "Enviando requerimiento..." : 
-                   status === "success" ? "¡Recibido con éxito!" : "Enviar Solicitud Segura"}
+                  {status === "sending"
+                    ? "Enviando requerimiento..."
+                    : status === "success"
+                      ? "¡Recibido con éxito!"
+                      : "Enviar Solicitud Segura"}
                 </span>
                 {status === "idle" && <ArrowUpRightIcon className="size-4" />}
               </button>
@@ -199,7 +208,8 @@ export const ContactSection = () => {
               {/* Mensajes de feedback */}
               {status === "success" && (
                 <p className="text-xs font-medium text-emerald-300 text-center bg-emerald-500/10 py-2.5 rounded-lg border border-emerald-500/20">
-                  ¡Solicitud enviada! Nos comunicaremos al correo/teléfono indicado.
+                  ¡Solicitud enviada! Nos comunicaremos al correo/teléfono
+                  indicado.
                 </p>
               )}
               {status === "error" && (
